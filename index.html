@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Zimbabwean music, artists, and live events">
+    <title>ZimWaves - Zimbabwean Music Discovery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <i class="fas fa-wave-square"></i>
+                    <span>ZimWaves</span>
+                </a>
+
+                <!-- Mobile Hamburger Menu -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-list desktop-nav" id="nav-list">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="artists.html"><i class="fas fa-users"></i> Artists</a></li>
+                    <li><a href="genres.html"><i class="fas fa-guitar"></i> Genres</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a></li>
+                </ul>
+
+                <!-- Mobile Navigation Menu (Hidden by default) -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="artists.html"><i class="fas fa-users"></i> Artists</a></li>
+                        <li><a href="genres.html"><i class="fas fa-guitar"></i> Genres</a></li>
+                        <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                        <li><a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section - Featured Artist -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Discover the Sound of Zimbabwe</h1>
+                        <p class="hero-subtitle">Explore local artists, genres, and live events from the heart of Africa</p>
+                        <a href="#featured-artist" class="btn btn-primary">Listen Now</a>
+                        <a href="artists.html" class="btn btn-secondary">Browse Artists</a>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-music"></i>
+                            <p>Featured Artist Image</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Artist of the Week -->
+        <section class="featured-artist" id="featured-artist">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-crown"></i> Artist of the Week</h2>
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <div class="featured-details">
+                        <h3>Loading Artist...</h3>
+                        <p class="artist-genre">Genre: Loading...</p>
+                        <p class="artist-bio">Artist information loading from Spotify API...</p>
+                        <div class="featured-actions">
+                            <button class="btn btn-primary"><i class="fas fa-play"></i> Play Preview</button>
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Add to Favorites</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Genres -->
+        <section class="genres-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-compass"></i> Explore Genres</h2>
+                    <a href="genres.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="genres-scroll">
+                    <div class="genre-card">
+                        <i class="fas fa-guitar"></i>
+                        <h4>Sungura</h4>
+                    </div>
+                    <div class="genre-card">
+                        <i class="fas fa-drum"></i>
+                        <h4>ZimDancehall</h4>
+                    </div>
+                    <div class="genre-card">
+                        <i class="fas fa-microphone"></i>
+                        <h4>Afrofusion</h4>
+                    </div>
+                    <div class="genre-card">
+                        <i class="fas fa-hands-praying"></i>
+                        <h4>Gospel</h4>
+                    </div>
+                    <div class="genre-card">
+                        <i class="fas fa-headphones"></i>
+                        <h4>Hip Hop</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Artists -->
+        <section class="artists-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-fire"></i> Popular Artists</h2>
+                    <a href="artists.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="artists-grid" id="artists-grid">
+                    <!-- Artist cards will be dynamically loaded here -->
+                    <div class="loading-artists">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading artists from Spotify API...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-calendar-star"></i> Upcoming Events</h2>
+                    <a href="events.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="event-day">--</span>
+                            <span class="event-month">---</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Loading Events...</h4>
+                            <p>Event information loading from Eventbrite API...</p>
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Location</span>
+                        </div>
+                        <button class="btn btn-small">Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-wave-square"></i>
+                        <span>ZimWaves</span>
+                    </a>
+                    <p class="tagline">Celebrating Zimbabwean Music & Culture</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="artists.html">Artists</a></li>
+                            <li><a href="genres.html">Genres</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="favorites.html">Favorites</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ZimWaves. All rights reserved.</p>
+                <p class="api-attribution">Powered by <a href="https://developer.spotify.com/" target="_blank">Spotify API</a> and <a href="https://www.eventbrite.com/platform/api" target="_blank">Eventbrite API</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="events.html" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Events</span>
+        </a>
+        <a href="favorites.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Favorites</span>
+        </a>
+        <a href="#" class="nav-item" id="search-btn">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </a>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
